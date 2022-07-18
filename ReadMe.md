@@ -26,7 +26,7 @@ La soustraction de 2 images ce fais en fits
 
 # Video
 
--   Mettre les images de la video dans un fichier sépare
+-   Mettre les images en JPG de la video dans un fichier sépare
 
 -   Redimensionner les image
 
