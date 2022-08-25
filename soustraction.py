@@ -1,9 +1,15 @@
 from astropy.io import fits
+import sys
 
-img = fits.getdata('C:/Users/kuume/OneDrive/Bureau/python/img/a.fits', ext=0) 
+img = fits.getdata('C:\\Users\\Ballatore\\Desktop\\testImage\\image\\' + sys.argv[1], ext=0) 
 
-dark = fits.getdata('C:/Users/kuume/OneDrive/Bureau/python/img/b.fits') 
+dark = fits.getdata('C:\\Users\\Ballatore\\Desktop\\testImage\\image\\' + sys.argv[2]) 
 
-darksub = img - dark
+darksub = dark - img 
 
-fits.writeto('s15_sub.fits', darksub) # save 
+fits.writeto('C:\\Users\\Ballatore\\Desktop\\testImage\\sub\\' + sys.argv[3], darksub) # save 
+
+  
+print("This is the name of the program:", sys.argv[0])
+  
+print("Argument List:", str(sys.argv))

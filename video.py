@@ -1,7 +1,10 @@
 import os 
 from PIL import Image  
 import cv2  
-  
+import time
+
+start = time.time()
+print("The time used to execute this is given below")
 print(os.getcwd())  
   
 os.chdir("C:\\Users\\Ballatore\\Desktop\\testImage\\imgVideo")   
@@ -9,7 +12,6 @@ path = "C:\\Users\\Ballatore\\Desktop\\testImage\\imgVideo"
   # C:\\Users\\Ballatore\\Desktop\\testImage\\imgVideo
 mean_height = 0
 mean_width = 0
-  
 num_of_images = len(os.listdir('.')) 
   
 for file in os.listdir('.'): 
@@ -61,7 +63,7 @@ def generate_video():
     # cv2.VideoWriter(video_name, fourcc, fps, size)
    
     fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-    fps = 2.0 # 0,5 secondes
+    fps = 5.0 # 0,5 secondes
     video = cv2.VideoWriter(video_name, fourcc, fps, (width, height))  
   
     
@@ -74,3 +76,6 @@ def generate_video():
   
   
 generate_video() 
+end = time.time()
+
+print(end - start)

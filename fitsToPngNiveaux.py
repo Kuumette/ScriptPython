@@ -7,7 +7,7 @@ from astropy.io import fits
 from PIL import Image
 from skimage.exposure import rescale_intensity
 
-path = "C:\\Users\\Ballatore\\Desktop\\testImage\\data\\"
+path = "C:\\Users\\Ballatore\\Desktop\\testImage\\image\\"
 dir_list = os.listdir(path) 
 
 print(dir_list)
