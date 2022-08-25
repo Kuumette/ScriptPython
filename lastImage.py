@@ -69,19 +69,20 @@ def remove_image(path, extension):
             print(f"Error:{ e.strerror}")
 
 # Soustraction de deux image avec comme parametre le nom de la premiere image le nom de la deuxieme image et le nom de la soustraction avec la suppresion de l'image a et b
-def soustraction(path, a, b, c):
+def soustraction(path, c):
     print("Soustraction")
-    imgA = path + a
-    imgB = path + b
-    a = fits.getdata(path + a, ext=0) 
-    b = fits.getdata(path + b) 
+
+    url = path
+
+    list_of_files = os.listdir(url)
+
+    a = fits.getdata(path + list_of_files[0], ext=0) 
+    b = fits.getdata(path + list_of_files[1]) 
 
     darksub = b - a 
 
     fits.writeto(path + c, darksub) # save 
 
-    os.remove(imgA)
-    os.remove(imgB)
 
 # Fonction qui permet de redimentionner les image de la video
 def resize_for_anim(path, x, y, quality):

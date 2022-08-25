@@ -14,7 +14,7 @@ print("The time used to execute this is given below")
 # ------------------------------------------------ #
 
 ###----### Soustraction ###----###
-# soustraction("./image/", "APICAM.2020-02-16T01_32_15.000.fits", "APICAM.2020-02-16T01_34_45.000.fits", "APICAM.2020-02-16T01_32_15.000C.fits") ## OK
+# soustraction("./image/", "APICAM.2020-02-16T01_32_15.000C.fits") ## OK
 # fits_to_png_niveaux("./image/") ## OK
 # png_to_jpg("./image/*.png", 20) ## OK
 # remove_image('./image/*.', "png") ## OK
